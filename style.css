@@ -1,0 +1,414 @@
+@import url('https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'stix two text', 'cormorant';
+}
+
+body header {
+    padding: 2rem 4rem 0;
+    background-color: #fff;
+}
+
+header nav {
+    margin: 0 auto;
+    max-width: 79%;
+    height: 3rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 5rem;
+    align-items: center;
+}
+
+header .nav .logo {
+    width: 11.5rem;
+    height: auto;
+    display: block;
+}
+
+header .nav .logo img {
+    width: 100%;
+    height: 100%;
+}
+
+header .nav ul {
+    display: flex;
+    flex-direction: row;
+    gap: 2.5rem;
+    font-family: 'cormorant';
+    font-size: medium;
+
+}
+
+header .nav ul li {
+    list-style-type: none;
+    font-family: 'arimo';
+    font-size: 0.91rem;
+    font-weight: 600;
+    color: #455d91;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+header .nav ul li:hover {
+    color: #01ABAB;
+}
+
+header .nav button {
+    width: 9rem;
+    height: 2.9rem;
+    border: none;
+    border-radius: 0.6rem;
+    font-size: 0.91rem;
+    font-weight: 500;
+    font-family: 'arimo';
+    color: black;
+    background-color: #EEEEEE;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+header .nav button:hover {
+    background-color: #22263C;
+    color: #fff;
+}
+
+html, body {
+    min-height: 100vh;
+    background-color: #fff;
+}
+
+body .hero-sct {
+    padding: 1rem 3rem 0;
+    margin: 0 auto;
+    width: 79%;
+    background-color: #fff;
+}
+
+body .hero-sct .hero-wrapper {
+    max-width: 45rem;
+    display: flex;
+    flex-direction: column;
+}
+
+body .hero-sct .hero-wrapper .hero-heading {
+    font-size: 5.5rem;
+    line-height: 6.5rem;
+    font-weight: bolder;
+    font-family: 'russo one';
+    padding: 4.7rem 0 0;
+    margin-bottom: 2rem;
+    
+}
+
+.hero-heading span {
+    font-family: 'russo one';
+    color: #FB912A;
+}
+
+.hero-wrapper .hero-detail {
+    font-size: 1.5rem;
+    font-weight: 300;
+    line-height: 2rem;
+    margin-bottom: 2.5rem;
+    max-width: 40rem;
+}
+
+.hero-wrapper .hero-ctas {
+    align-items: left;
+    display: flex;
+    justify-content: flex-start;
+    max-width: 4800rem;
+    gap: 1rem;
+}
+
+.hero-ctas li {
+    list-style-type: none;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.hero-ctas .create-account {
+    background-color: #0A0E27;
+    color: #fff;
+    padding: 1.3rem 1.8rem;
+    border-radius: 0.5rem; 
+}
+
+.hero-ctas .sales {
+    background-color: #EEEEEE;
+    color: black;
+    padding: 1.3rem 1.6rem;
+    border-radius: 0.5rem; 
+}
+
+.customer-grid .customer-wrapper{
+    margin-top: 5.5rem;
+    display: flex;
+    flex-direction: row;
+    gap: 4rem;
+    position: relative;
+}
+
+.customer-grid .customer-wrapper .img-wrapper {
+    height: 110%;
+    width: 1000px;
+    /* position: relative; */
+}
+
+.customer-wrapper .img-wrapper figure {
+    height: 770px;
+    max-width: 1000px;
+    /* background-color: #01ABAB; */
+    background-image: url('./Assets/microsoft.webp');
+    background-position: center;
+    background-size: cover;
+    position: relative; 
+}
+
+.customer-wrapper .img-wrapper figure img {
+    height: 100%;
+    width: 800px;
+}
+
+.customer-grid .customer-wrapper .yanga-wrapper{
+    position: relative;
+    height: 90%;
+    width: 700px;
+    margin-top: -12rem;
+    overflow: hidden;
+    
+}
+
+.customer-grid .customer-wrapper .yanga-wrapper figure {
+    height: 700px;
+    width: 800px;
+    background-image: url('./Assets/yanga-beauty.webp');
+    background-position: right;
+    background-size: cover;
+    overflow: hidden;
+    position: relative;
+}
+
+.customer-grid .customer-wrapper .yanga-wrapper figure img  {
+    background-position: center;
+    width: 100%;
+    height: 100%;
+}
+
+figure figcaption {
+    font-size: 1.5rem;
+    color: white;
+    font-weight: 500;
+}
+
+.microsoft figcaption {
+    position: absolute;
+    right: 3rem;
+    bottom: 1.5rem;
+}
+.yanga figcaption {
+    position: absolute;
+    left: 2.5rem;
+    bottom: 1.7rem;
+}
+
+.yanga-wrapper p {
+    max-width: 380px;
+    font-size: 1.3rem;
+    font-weight: 400;
+    line-height: 2rem;
+    margin-top: 4rem;
+}
+
+body .businesses {
+    width: 79%;
+    margin: 5rem auto;
+    padding: 2rem 3rem 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+}
+
+.businesses .business-intro {
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.business-intro span {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.business-list {
+    margin-top: -1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.business-list .business:nth-child(1) {
+    width: 6rem;
+    height: 10rem;
+}
+.business-list .business:nth-child(5) {
+    width: 7rem;
+    height: 10rem;
+}
+
+.business-list .business:nth-child(1) img {
+    height: 100%;
+    width: 100%;
+}
+.business-list .business:nth-child(5) img {
+    height: 100%;
+    width: 100%;
+}
+
+.body .payment-tools {
+    max-width: 79%;
+    margin: 10rem auto;
+    padding: 2rem 3rem;
+}
+
+
+.payment-intro {
+    max-width: 40rem;
+}
+.payment-intro p {
+    font-size: 4.6rem;
+    line-height: 5rem;
+    font-weight: bolder;
+    font-family: 'russo one';
+    margin-bottom: 2rem;
+}
+.payment-intro span {
+    font-family: 'russo one';
+    color: #FB912A;
+} 
+
+
+.process {
+    margin: 4rem auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5rem;
+}
+
+.checkout {
+    max-width: 20rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+}
+
+.process .checkout p {
+    font-size: 1.3rem;
+    line-height: 2rem;
+}
+
+.checkout button {
+    max-width: 8rem;
+    font-weight: 600;
+    background-color: #0A0E27;
+    color: #fff;
+    padding: 0.9rem 1rem;
+    border-radius: 0.5rem; 
+    margin-top: 0.5rem;
+}
+
+.process .checkout-img {
+    height: 40rem;
+    width: 19rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.checkout-img img {
+    height: 100%;
+    width: 100%;
+    border: none;
+    border-radius: 30px;
+    filter: drop-shadow(0 4px 20px rgba(0,0,0,.2));
+}
+
+.process .payments {
+    max-width: 20rem;
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+}
+
+.payments .accept {
+    max-width: 20rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.accept h2 {
+    font-weight: 800;
+}
+
+.accept p {
+    font-size: 1.3rem;
+    line-height: 2rem;
+}
+
+.payments .transfers {
+    max-width: 20rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.transfers h2 {
+    font-weight: 800;
+}
+
+.transfers p {
+    font-size: 1.3rem;
+    line-height: 2rem;
+}
+
+.learn {
+    color: #FB4D21;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.5rem;
+    cursor: pointer;
+    max-width: 8rem;
+    transition: 1s;
+}
+
+.learn:hover .angle {
+    transform: translateX(0.5rem);
+}
+.learn p {
+    font-size: 1.0rem;
+    font-weight: 600;
+    display: inline-flex;
+}
+
+.angle {
+    width: 32px;
+    position: relative;
+    top: 0.1rem;
+    transition: 0.5s;
+}
+
+.angle .fa-solid {
+    width: 100%;
+    height: 100%;
+}
