@@ -275,7 +275,7 @@ body .businesses {
 .body .payment-tools {
     max-width: 79%;
     margin: 10rem auto;
-    padding: 2rem 3rem;
+    padding: 2rem 3rem 0;
 }
 
 
@@ -410,5 +410,95 @@ body .businesses {
 
 .angle .fa-solid {
     width: 100%;
+    height: 100%;
+}
+
+.body .build {
+    background-color: #F8FAFD;
+}
+
+.body .build-wrapper {
+    width: 79%;
+    margin: 5rem auto;
+    padding: 2rem 3rem 0;
+}
+
+.build-wrapper .build-header {
+    width: 90%;
+    font-size: 4.525rem;
+    line-height: 5.3rem;
+    font-weight: bolder;
+    font-family: 'russo one';
+    padding: 5rem 0 0;
+    margin-bottom: 2rem; 
+}
+
+.build-header span {
+    font-size: 4.525rem;
+    line-height: 5.3rem;
+    font-weight: bold;
+    font-family: 'russo one';
+    color: #35A162;
+}
+
+.store-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 7rem;
+}
+
+.store-wrapper .store-box {
+    width: 100%;
+    display: flex;
+    gap: 6rem;
+    justify-content: flex-end;
+}
+
+.store-wrapper .store-box .store {
+    width: 20.7rem;
+    max-width: 30rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-top: 6rem;
+}
+
+.store h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.store p {
+    font-size: 1.3rem;
+    font-weight: 100;
+    line-height: 2rem;
+}
+
+.store .selling-cta {
+    position: relative;
+    left: -0.3em;
+    color: #EEEEEE;
+    background-color: #0A0E27;
+    width: 8rem;
+    height: 3rem;
+    padding: 1rem;
+    font-weight: 700;
+    margin-top: 0.7rem;
+    border-radius: 0.5rem; 
+}
+
+.yanga figure {
+    height: 40rem;
+    width: 34rem;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.yanga figure img {
+    width: 200%;
     height: 100%;
 }
