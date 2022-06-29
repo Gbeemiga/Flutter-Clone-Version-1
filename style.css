@@ -22,8 +22,11 @@
 /* Styling the nav-Bar */
 
 body header {
-    padding: 2rem 4rem 0;
+    padding: 2rem 4rem 1rem;
     background-color: #fff;
+    position: sticky;
+    top: 0px;
+    z-index: 99;
 }
 
 header nav {
@@ -36,6 +39,7 @@ header nav {
     gap: 4.5rem;
     align-items: center;
 }
+
 
 header .nav .logo {
     width: 11.5rem;
@@ -786,7 +790,7 @@ body .cards {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-bottom: 10rem;
+    margin-bottom: 40rem;
 }
 
 .stacked-cards .main-card {
@@ -900,22 +904,41 @@ body .cards {
 }
 
 .card-wrapper .sliding-cards {
-    width: 80%;
+    width: 120%;
+    position: relative;
 }
 
 .card-wrapper .sliding-cards .card {
-    /* position: absolute; */
+    position: absolute;
     background-color: #313131;
     border-radius: 1rem;
     box-shadow: 0 25px 50px rgb(0 0 0 / 80%);
     padding: 3.5rem 6rem 5rem 4rem ;
     text-align: left;
-    height: 20rem;
-    width: 40vw;
+    height: 22rem;
+    width: 37vw;
     max-width: 56.2rem;
     z-index: 2;
     transform: translateX(0deg);
     transition: transform .8s cubic-bezier(.16,1,.3,1);
+}
+
+.card-wrapper .sliding-cards .card:nth-child(1) {
+    left: 20px;
+    bottom: 130px;;
+}
+.card-wrapper .sliding-cards .card:nth-child(2) {
+    left: 370px;
+    bottom: 130px;
+}
+ .sliding-cards .card:nth-child(3) {
+    left: 730px;
+    bottom: 130px;
+}
+
+.sliding-cards .card:nth-child(2):hover.sliding-cards .card:nth-child(3) {
+    transform:translateX(20%);
+    background-color: #fff;
 }
 
 .sliding-cards .card h6 {
@@ -926,6 +949,408 @@ body .cards {
 .sliding-cards .card p {
     font-size: 1.075rem;
     line-height: 1.8rem;
+}
 
 
+
+/* The APIs section */
+
+body .api {
+    margin-top: -5rem;
+    height: auto;
+    width: 100%;
+    background-color: #F8FAFD;
+    
+}
+
+.api .api-wrapper {
+    color: #1D1D1D;
+    width: 79%;
+    margin: 5rem auto;
+    padding: 2rem 3rem 0;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.api-wrapper .api__header {
+    text-align: left;
+    margin-top: 8rem;
+    width: 80%;
+    font-size: 4.725rem;
+    line-height: 5.5rem;
+    font-weight: bold;
+    font-family: 'russo one';
+    margin-bottom: 2.5rem;
+}
+
+.api-wrapper .api__header span {
+    text-align: left;
+    font-size: 4.725rem;
+    line-height: 5.5rem;
+    font-weight: bold;
+    font-family: 'russo one';
+    color: #EB7DA7;
+}
+
+.api-wrapper .api__notes {
+    font-size: 1.5rem;
+    font-weight: 300;
+    line-height: 2rem;
+    margin-bottom: 2.5rem;
+    max-width: 40rem;
+}
+
+.api-wrapper .api__details li {
+    position: relative;
+    list-style: none;
+    font-size: 1.2rem;
+    padding-left: 2.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.api-wrapper .api__details li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: .4rem;
+    height: .7rem;
+    width: 1.3rem;
+    border-radius: 50%;
+    background-color: #262C55;
+
+}
+
+.api .api-cta {
+    color: #EEEEEE;
+    background-color: #0A0E27;
+    width: 12rem;
+    height: 4.7rem;
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: 700;
+    margin-top: 2.5rem;
+    border-radius: 0.5rem; 
+    margin-bottom: 8rem;
+}
+
+/* Styling the global section */
+
+.reach .reach-wrapper {
+    color: #1D1D1D;
+    width: 79%;
+    margin: 5rem auto;
+    padding: 2rem 3rem 0;
+    max-width: 100%;
+}
+
+.reach__details {
+    display: flex;
+    gap: 5rem;
+    position: relative;
+}
+
+
+.reach-wrapper .reach__header {
+    text-align: left;
+    margin-top: 5rem;
+    width: 80%;
+    font-size: 4.8rem;
+    line-height: 5.5rem;
+    font-weight: bold;
+    font-family: 'russo one';
+    margin-bottom: 7rem;
+}
+
+.reach-wrapper .reach__header span {
+    text-align: left;
+    font-size: 4.8rem;
+    line-height: 5.5rem;
+    font-weight: bold;
+    font-family: 'russo one';
+    color: #6672C7;
+}
+
+.reach__info {
+    position: relative;
+}
+
+.reach__info::before {
+    content: ' ';
+    position: absolute;
+    left: 0;
+    height:100%;
+    width: 0.1rem;
+    border-left: .9px dashed black;
+}
+
+.reach__info li {
+    list-style-type: none;
+    margin-bottom: 3.5rem;
+    padding-left: 2rem;
+}
+
+.reach__info li h3 {
+    font-size: 1.2rem;
+    line-height: 2rem;
+    font-weight: black;
+    position: relative;
+    margin-bottom: .6rem;
+}
+
+.reach__info li h3::before {
+    content: ' ';
+    position: absolute;
+    left: -2.055rem;
+    top: 0;
+    height:80%;
+    width: 0.075rem;
+    z-index: 9;
+    background-color: white;
+    border: 1px solid black;
+}
+
+.reach__info li:nth-child(1) h3 {
+    color: #00ABAB;
+}
+
+.reach__info p {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+/* Styling the payment options */
+
+.reach__info li:last-child .payment__details {
+    display: flex;
+    gap: 5rem;
+}
+
+.payment__info li {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: .8rem;
+    padding-left: 0;
+}
+
+.reach-wrapper .globe__logo {
+    position: absolute;
+    right: -12.5rem;
+    top: -15rem;
+    height: 63rem;
+    width: 63rem;
+}
+
+.reach-wrapper .globe__logo img {
+    width: 100%;
+    height: 100%;
+} 
+
+.reach-wrapper .globe {
+    position: absolute;
+    right: -9.5rem;
+    top: -9.5rem;
+    height: 56rem;
+    width: 56rem;
+}
+
+.reach-wrapper .globe img {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* Get started section */
+
+
+.get-started .starting-wrapper {
+    color: #1D1D1D;
+    width: 79%;
+    margin: 7rem auto;
+    padding: 2rem 3rem 0;
+    max-width: 100%;
+}
+
+.starting-wrapper .starting-body {
+    margin-top: 5rem;
+}
+
+.starting-body .start__wrapper {
+    background-color: #1D1D1D;
+    color: white;
+    padding: 4rem 10rem;
+    border-radius: 1rem;
+    box-shadow: 0 25px 50px rgb(29 29 29 / 50%);
+}
+
+.start__wrapper h3 {
+    margin-top: 2rem;
+    text-align: left;
+    width: 80%;
+    font-size: 3.2rem;
+    line-height: 5.5rem;
+    font-weight: bold;
+    font-family: 'russo one';
+}
+
+.start__wrapper p {
+    font-size: 1.4rem;
+    font-weight: 300;
+    line-height: 2rem;
+    margin-top: 1rem;
+    max-width: 40rem;
+    width: 100%;
+}
+
+.start__wrapper .starting__ctas {
+    margin-top: 2rem;
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+    justify-content: start;
+}
+
+.start__wrapper .starting__ctas .start-cta {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-top: 1.5rem;
+    background-color: #EEEEEE;
+    color: black;
+    padding: 1.175rem 1.3rem;
+    border-radius: .7rem; 
+}
+
+.starting__ctas .sales__cta {
+    color: #ffffff;
+    position: relative;
+    top: 0.4rem;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    gap: 0.4rem;
+    cursor: pointer;
+    min-width: 7rem;
+    transition: 1s;
+}
+
+.sales__cta:hover .angle {
+    transform: translateX(0.5rem);
+}
+.sales__cta p {
+    font-size: 1rem;
+    font-weight: 600;
+    display: inline-flex;
+}
+
+.sales__cta .angle {
+    width: 10px;
+    position: relative;
+    top: -0.2rem;
+    transition: 0.5s;
+}
+
+.sales__cta .angle #front {
+    width: 100%;
+    height: 100%;
+}
+
+footer .footer-wrapper {
+    color: #1D1D1D;
+    width: 79%;
+    margin: 10rem auto;
+    padding: 2rem 3rem 0;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+footer .footer-wrapper li {
+    list-style-type: none;
+    font-family: 'cormorant';
+    font-size: 1.025rem;
+    font-weight: 200;
+}
+
+footer .footer-wrapper .footer__details {
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-wrapper .footer__details .products {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.footer-wrapper .footer__details .products li:nth-child(1) {
+    font-size: 1.125rem;
+    font-weight: 700;
+    position: relative;
+    top: .4rem;
+}
+
+
+.footer-wrapper .footer__details .resources {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.footer-wrapper .footer__details .resources li:nth-child(1) {
+    font-size: 1.125rem;
+    font-weight: 700;
+    position: relative;
+    top: .4rem;
+}
+
+
+.footer-wrapper .footer__details .developers {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.footer-wrapper .footer__details .developers li:nth-child(1) {
+    font-size: 1.125rem;
+    font-weight: 700;
+    position: relative;
+    top: .4rem;
+}
+
+
+.footer-wrapper .footer__details .flutterwave {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.footer-wrapper .footer__details .flutterwave li:nth-child(1) {
+    font-size: 1.125rem;
+    font-weight: 700;
+    position: relative;
+    top: .4rem;
+}
+
+
+.footer-wrapper .footer__details .contact {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.footer-wrapper .footer__details .contact li:nth-child(1) {
+    font-size: 1.125rem;
+    font-weight: 700;
+    position: relative;
+    top: .4rem;
+}
+
+
+.footer-wrapper .connect {
+    margin-top: 4rem;
 }
